@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: itoken-zipkin
+  zipkin:
+    base-url: http://192.168.137.129:9411
+  boot:
+    admin:
+      client:
+        url: http://192.168.137.129:8084
+
+server:
+  port: 9411
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.137.129:8761/eureka/,http://192.168.137.129:8762/eureka/
+
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false

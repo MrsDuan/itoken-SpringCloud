@@ -1,0 +1,26 @@
+spring:
+  boot:
+    admin:
+      client:
+        url: http://192.168.137.129:8084
+  zipkin:
+    base-url: http://192.168.137.129:9411
+  application:
+    name: itoken-zuul
+
+server:
+  port: 8769
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.137.129:8761/eureka/,http://192.168.137.129:8762/eureka/
+
+
+zuul:
+  routes:
+    api-a:
+      path: /api/a/**
+    api-b:
+      path: /api/b/**
+      serviceId: itoken-feign
