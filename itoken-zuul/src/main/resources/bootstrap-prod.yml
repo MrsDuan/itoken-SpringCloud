@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      uri: http://192.168.137.129:8888
+      name: zuul
+      label: master
+      profile: prod
